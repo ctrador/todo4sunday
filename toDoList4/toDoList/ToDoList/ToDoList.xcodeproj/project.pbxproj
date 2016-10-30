@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		444810C01DC63C5E00E72E37 /* ToDoCatergoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444810BF1DC63C5E00E72E37 /* ToDoCatergoryTableViewController.swift */; };
 		44A8692B1DBE7444001F521F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A8692A1DBE7444001F521F /* AppDelegate.swift */; };
 		44A869301DBE7444001F521F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A8692E1DBE7444001F521F /* Main.storyboard */; };
 		44A869321DBE7444001F521F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A869311DBE7444001F521F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		444810BF1DC63C5E00E72E37 /* ToDoCatergoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCatergoryTableViewController.swift; sourceTree = "<group>"; };
 		44A869271DBE7444001F521F /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A8692A1DBE7444001F521F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A8692F1DBE7444001F521F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				44E63F931DBF15F400FC758B /* ImageViewController.swift */,
 				44C894081DC13A320089D9E0 /* ToDoTableViewController.swift */,
 				44C8940A1DC13E770089D9E0 /* ToDoDetailViewController.swift */,
+				444810BF1DC63C5E00E72E37 /* ToDoCatergoryTableViewController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				44E63F941DBF15F400FC758B /* ImageViewController.swift in Sources */,
 				44C8940B1DC13E770089D9E0 /* ToDoDetailViewController.swift in Sources */,
 				44C894091DC13A320089D9E0 /* ToDoTableViewController.swift in Sources */,
+				444810C01DC63C5E00E72E37 /* ToDoCatergoryTableViewController.swift in Sources */,
 				44C692511DBEC108005FDE2F /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
