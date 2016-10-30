@@ -25,10 +25,10 @@ class ToDoStore {
             toDos = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as! [ToDo]
         }else {
             toDos = []
-            toDos.append(ToDo(title: "To Do 1", text: "This is a to do detail", dueDate: "12/31/20016 12:59"))
-            toDos.append(ToDo(title: "To Do 2", text: "This is a another to do detail", dueDate: "12/31/20016 12:59"))
+            toDos.append(ToDo(title: "To Do 1", text: "This is a to do detail", dueDate: "12/31/20016 12:59", completed: "You Need To Complete this To Do"))
+            toDos.append(ToDo(title: "To Do 2", text: "This is a another to do detail", dueDate: "12/31/20016 12:59", completed: "You Need To Complete this To Do"))
             
-            toDos.append(ToDo(title: "To Do 3", text: "This is a to do detail or is it", dueDate: "12/31/20016 12:59"))
+            toDos.append(ToDo(title: "To Do 3", text: "This is a to do detail or is it", dueDate: "12/31/20016 12:59", completed: "You Need To Complete this To Do"))
             
          
             save()

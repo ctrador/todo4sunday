@@ -108,6 +108,7 @@ UIViewController {
         toDo.date = Date()
         toDo.image = imageView.image
         toDo.dueDate = selectedDateLabel.text!
+        toDo.completed = toDoCompleteLabel.text!
         
     }
     

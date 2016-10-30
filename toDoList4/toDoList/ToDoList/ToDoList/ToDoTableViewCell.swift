@@ -9,6 +9,9 @@
 import UIKit
 
 class ToDoTableViewCell: UITableViewCell {
+   
+    
+    @IBOutlet weak var toDoCompletedCell: UILabel!
     
     @IBOutlet weak var toDoTitleCell: UILabel!
     
@@ -39,7 +42,8 @@ class ToDoTableViewCell: UITableViewCell {
         toDoTextCell.text = toDo.text
         toDoDateCell.text = toDo.dateString
         toDoDueDate.text = toDo.dueDate
-
+        toDoCompletedCell.text = toDo.completed
+        
         
     }
         

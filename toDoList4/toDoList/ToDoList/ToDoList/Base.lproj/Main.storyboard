@@ -112,11 +112,18 @@
                                                 <segue destination="l9f-0C-Ili" kind="show" identifier="AddToDoSegue" id="F4w-ER-LLg"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-NI-ZTM">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="PcQ-NI-ZTM" firstAttribute="leading" secondItem="3Jf-V7-ROb" secondAttribute="leading" id="6fU-XS-1Jx"/>
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="top" secondItem="bkt-eK-3qS" secondAttribute="bottom" constant="8" id="7Wc-ee-Ins"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="FMt-nN-TSm"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="Fer-ql-RYF"/>
+                                        <constraint firstItem="PcQ-NI-ZTM" firstAttribute="top" secondItem="8ML-n0-yu1" secondAttribute="bottom" constant="8" symbolic="YES" id="Jif-sG-G0K"/>
                                         <constraint firstItem="bkt-eK-3qS" firstAttribute="top" secondItem="JLi-eK-Sym" secondAttribute="topMargin" constant="8" id="Mz2-gu-pCG"/>
                                         <constraint firstItem="8ML-n0-yu1" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" constant="112" id="WhG-Mf-FVs"/>
                                         <constraint firstItem="dh0-cA-gGf" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="WnH-i8-Z1f"/>
@@ -124,6 +131,7 @@
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="lLb-EL-UxB"/>
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="lkS-tq-c8k"/>
                                         <constraint firstItem="dh0-cA-gGf" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="m03-sU-gDH"/>
+                                        <constraint firstItem="PcQ-NI-ZTM" firstAttribute="trailing" secondItem="3Jf-V7-ROb" secondAttribute="trailing" id="r7O-pH-Klj"/>
                                         <constraint firstItem="bkt-eK-3qS" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="s0Y-Uh-EAv"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="top" secondItem="dh0-cA-gGf" secondAttribute="bottom" constant="8" id="tcB-bo-4aD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="8ML-n0-yu1" secondAttribute="trailing" constant="113" id="wh7-4v-OFx"/>
@@ -131,6 +139,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="toDoCompletedCell" destination="PcQ-NI-ZTM" id="Lox-td-PCE"/>
                                     <outlet property="toDoDateCell" destination="8ML-n0-yu1" id="U0r-JP-Xhh"/>
                                     <outlet property="toDoDueDate" destination="3Jf-V7-ROb" id="TU8-7z-bqd"/>
                                     <outlet property="toDoTextCell" destination="Std-r5-FSV" id="uoL-Mr-cCQ"/>
@@ -150,7 +159,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YB-gA-K8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="116"/>
+            <point key="canvasLocation" x="240.80000000000001" y="115.59220389805098"/>
         </scene>
         <!--To Do Detail View Controller-->
         <scene sceneID="Poe-Lv-wJH">
