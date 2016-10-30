@@ -23,6 +23,10 @@ UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var toDoCompleteSwitch: UISwitch!
+   
+    @IBOutlet weak var toDoCompleteLabel: UILabel!
+    
     
     var gestureRecognizer: UITapGestureRecognizer!
     var toDo = ToDo()
@@ -34,7 +38,7 @@ UIViewController {
         toDoTitleField.text = toDo.title
         toDoTextViewField.text = toDo.text
         selectedDateLabel.text = toDo.dueDate
-        
+        //toDoCompleteStatus()
         
         if let image = toDo.image {
             imageView.image = image
@@ -71,8 +75,20 @@ UIViewController {
             
         }
         
+    }
+    
+    func toDoCompleteStatus()  {
         
+        if toDoCompleteSwitch.isOn {
+           
+            toDoCompleteLabel.text = "This To Do is Complete"
+        }else {
+           
+            toDoCompleteLabel.text = "You need to Complete this To Do"
         
+      //  toDoCompleteLabel.text = "completed to\(toDoCompleteSwitch.isOn)"
+        
+        }
     }
     
     fileprivate func showPicker(_ type: UIImagePickerControllerSourceType){
@@ -96,6 +112,13 @@ UIViewController {
     }
     
     // MARK: IBActions
+  
+    @IBAction func toDoCompleteSwitchMoved(_ sender: AnyObject) {
+        
+        toDoCompleteStatus()
+        
+    }
+    
     
     @IBAction func datePicker(_ sender: AnyObject) {
         let dateFormatter = DateFormatter()
