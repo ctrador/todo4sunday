@@ -9,7 +9,7 @@
 import UIKit
 
 class ToDoDetailViewController:
-    UIViewController {
+UIViewController {
     
     @IBOutlet weak var toDoTitleField: UITextField!
     
@@ -18,8 +18,6 @@ class ToDoDetailViewController:
     @IBOutlet weak var selectedDateLabel: UILabel!
     
     @IBOutlet weak var toDoTimeAndDate: UILabel!
-    
-    @IBOutlet weak var toDoCatergoryField: UITextField!
     
     @IBOutlet weak var toDoTextViewField: UITextView!
     
@@ -32,7 +30,7 @@ class ToDoDetailViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         toDoTitleField.text = toDo.title
         toDoTextViewField.text = toDo.text
         selectedDateLabel.text = toDo.dueDate
@@ -118,15 +116,6 @@ class ToDoDetailViewController:
         present(alert, animated: true, completion:  nil)
     }
 }
-
-// Get the new view controller using segue.destinationViewController.
-// Pass the selected object to the new view controller.
-// if segue.identifier == "EditNotSegue" {
-//let toDoDetailVC = segue.destination as! toDoDetailViewController
-//  let tableCell = sender as! ToDoTableViewCell
-//toDoDetailVC.toDo = tableCell.toDo
-
-//}// use this to access camra on phone I Pad
 
 
 extension ToDoDetailViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {

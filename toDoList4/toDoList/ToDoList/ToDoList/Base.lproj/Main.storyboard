@@ -69,14 +69,6 @@
                                     <frame key="frameInset" width="375" height="261"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-DS-OIu">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="WA2-Jy-Bb7"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-cA-gGf">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="hwL-zM-54a"/>
@@ -122,14 +114,12 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dRl-DS-OIu" firstAttribute="top" secondItem="8ML-n0-yu1" secondAttribute="bottom" constant="8" id="4KJ-nM-QvF"/>
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="top" secondItem="bkt-eK-3qS" secondAttribute="bottom" constant="8" id="7Wc-ee-Ins"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="FMt-nN-TSm"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="Fer-ql-RYF"/>
                                         <constraint firstItem="bkt-eK-3qS" firstAttribute="top" secondItem="JLi-eK-Sym" secondAttribute="topMargin" constant="8" id="Mz2-gu-pCG"/>
                                         <constraint firstItem="8ML-n0-yu1" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" constant="112" id="WhG-Mf-FVs"/>
                                         <constraint firstItem="dh0-cA-gGf" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="WnH-i8-Z1f"/>
-                                        <constraint firstItem="dh0-cA-gGf" firstAttribute="top" secondItem="dRl-DS-OIu" secondAttribute="bottom" constant="8" id="Xci-5V-0JL"/>
                                         <constraint firstItem="8ML-n0-yu1" firstAttribute="top" secondItem="3Jf-V7-ROb" secondAttribute="bottom" constant="8" id="YM6-uq-yt5"/>
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="lLb-EL-UxB"/>
                                         <constraint firstItem="3Jf-V7-ROb" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="lkS-tq-c8k"/>
@@ -137,12 +127,10 @@
                                         <constraint firstItem="bkt-eK-3qS" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="s0Y-Uh-EAv"/>
                                         <constraint firstItem="Std-r5-FSV" firstAttribute="top" secondItem="dh0-cA-gGf" secondAttribute="bottom" constant="8" id="tcB-bo-4aD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="8ML-n0-yu1" secondAttribute="trailing" constant="113" id="wh7-4v-OFx"/>
-                                        <constraint firstItem="dRl-DS-OIu" firstAttribute="trailing" secondItem="JLi-eK-Sym" secondAttribute="trailingMargin" id="xA1-My-Xup"/>
-                                        <constraint firstItem="dRl-DS-OIu" firstAttribute="leading" secondItem="JLi-eK-Sym" secondAttribute="leadingMargin" id="yMx-oI-2ZA"/>
+                                        <constraint firstItem="dh0-cA-gGf" firstAttribute="top" secondItem="8ML-n0-yu1" secondAttribute="bottom" constant="36" id="yAE-yj-FJ6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="toDoCatergoryLabel" destination="dRl-DS-OIu" id="oTP-Ip-NQz"/>
                                     <outlet property="toDoDateCell" destination="8ML-n0-yu1" id="U0r-JP-Xhh"/>
                                     <outlet property="toDoDueDate" destination="3Jf-V7-ROb" id="TU8-7z-bqd"/>
                                     <outlet property="toDoTextCell" destination="Std-r5-FSV" id="uoL-Mr-cCQ"/>
@@ -433,14 +421,6 @@
                                     <frame key="frameInset" width="375" height="261"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-K2-ojF">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="dkW-wT-Z4E"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXr-q4-M0S">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="dM5-md-Ywu"/>
@@ -494,12 +474,9 @@
                                         <constraint firstItem="Ytx-Tg-ohz" firstAttribute="trailing" secondItem="t8V-br-jZL" secondAttribute="trailingMargin" id="MF6-BX-iiB"/>
                                         <constraint firstItem="g3g-Ku-0W4" firstAttribute="top" secondItem="tcJ-fS-Ml9" secondAttribute="bottom" constant="8" id="QsI-Ne-H3l"/>
                                         <constraint firstItem="IXr-q4-M0S" firstAttribute="leading" secondItem="t8V-br-jZL" secondAttribute="leadingMargin" id="TYG-Fs-Fek"/>
-                                        <constraint firstItem="rQV-K2-ojF" firstAttribute="leading" secondItem="t8V-br-jZL" secondAttribute="leadingMargin" id="UnW-Q8-K0k"/>
                                         <constraint firstItem="E5b-2t-yU4" firstAttribute="top" secondItem="t8V-br-jZL" secondAttribute="topMargin" constant="8" id="XR1-mF-FI4"/>
+                                        <constraint firstItem="IXr-q4-M0S" firstAttribute="top" secondItem="g3g-Ku-0W4" secondAttribute="bottom" constant="36" id="cbz-jz-a0e"/>
                                         <constraint firstItem="tcJ-fS-Ml9" firstAttribute="leading" secondItem="t8V-br-jZL" secondAttribute="leadingMargin" id="cjf-nm-OVb"/>
-                                        <constraint firstItem="rQV-K2-ojF" firstAttribute="top" secondItem="g3g-Ku-0W4" secondAttribute="bottom" constant="8" id="dqw-0F-4aM"/>
-                                        <constraint firstItem="IXr-q4-M0S" firstAttribute="top" secondItem="rQV-K2-ojF" secondAttribute="bottom" constant="8" id="h5N-qJ-D4I"/>
-                                        <constraint firstItem="rQV-K2-ojF" firstAttribute="trailing" secondItem="t8V-br-jZL" secondAttribute="trailingMargin" id="iyo-6X-TSg"/>
                                         <constraint firstItem="g3g-Ku-0W4" firstAttribute="leading" secondItem="t8V-br-jZL" secondAttribute="leadingMargin" constant="112" id="mkG-ur-uyp"/>
                                         <constraint firstItem="IXr-q4-M0S" firstAttribute="trailing" secondItem="t8V-br-jZL" secondAttribute="trailingMargin" id="msS-29-KPh"/>
                                         <constraint firstItem="tcJ-fS-Ml9" firstAttribute="trailing" secondItem="t8V-br-jZL" secondAttribute="trailingMargin" id="mzc-KO-WuO"/>
@@ -508,7 +485,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="toDoCatergoryLabel" destination="rQV-K2-ojF" id="xSd-3R-hBS"/>
                                     <outlet property="toDoDateCell" destination="g3g-Ku-0W4" id="q5H-9Q-fUl"/>
                                     <outlet property="toDoDueDate" destination="tcJ-fS-Ml9" id="uir-5V-vBY"/>
                                     <outlet property="toDoTextCell" destination="Ytx-Tg-ohz" id="qnP-9t-2iG"/>

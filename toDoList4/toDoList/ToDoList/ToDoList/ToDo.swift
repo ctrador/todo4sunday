@@ -16,16 +16,12 @@ class ToDo: NSObject, NSCoding {
     var date = Date()
     var image: UIImage?
     var dueDate = ""
-    var catergory = ""
-    
     
     let titleKey = "title"
     let textKey = "text"
     let dateKey = "date"
     let imageKey = "image"
     let dueDateKey = "MM-dd-yyyy HH:mm"
-    let catergoryKey = "catergory"
-    
     
     var dateString: String {
         let dateFormatter = DateFormatter()
@@ -37,11 +33,10 @@ class ToDo: NSObject, NSCoding {
         super.init()
     }
     
-    init(catergory: String, title: String, text: String, dueDate: String) {
+    init(title: String, text: String, dueDate: String) {
         self.title = title
         self.text = text
         self.dueDate = dueDate
-        self.catergory = catergory
         
     }
     
