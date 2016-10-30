@@ -9,11 +9,7 @@
 import UIKit
 
 class ToDoDetailViewController:
-    UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
-    
-    @IBOutlet weak var catergoryPickerLabel: UILabel!
-    
-    @IBOutlet weak var catergoryPicker: UIPickerView!
+    UIViewController {
     
     @IBOutlet weak var toDoTitleField: UITextField!
     
@@ -31,7 +27,6 @@ class ToDoDetailViewController:
     
     
     var gestureRecognizer: UITapGestureRecognizer!
-    var catergoryArray = ["Home", "Work", "Other"]
     var toDo = ToDo()
     var catergorySelection = 0
     
@@ -56,12 +51,6 @@ class ToDoDetailViewController:
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return catergoryArray[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return catergoryArray.count
     }
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1
