@@ -64,7 +64,7 @@ class ToDoCatergoryTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
@@ -74,7 +74,7 @@ class ToDoCatergoryTableViewController: UITableViewController {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
      }
      }
-     */
+    
     
     
     // Override to support rearranging the table view.
@@ -91,14 +91,50 @@ class ToDoCatergoryTableViewController: UITableViewController {
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        if segue.identifier == "EditCatergorySegue"{
+            let catergoryDetailVC = segue.destination as! ToDoCatergoryDetailViewController
+            let catergorytableCell = sender as! CatergoryTableViewCell
+            catergoryDetailVC.catergory = catergorytableCell.catergory
+            
+            
+            
+        
+        
+        
      }
-     */
     
+    
+}
+    
+    
+    // mark: unwind Segue
+    
+    @IBAction func saveCatergoryDetail(_ segue: UIStoryboardSegue) {
+        let catergoryDetailVC = segue.source as! ToDoCatergoryDetailViewController
+        if let indexpath = tableView.indexPathForSelectedRow {
+            // ToDoStore.shared.updateToDo(toDoDetailVC.toDo, index: indexpath.row)
+            CatergoryStore.shared.sort()
+            
+            var indexPaths: [IndexPath] = []
+            for index in 0...indexpath.row {
+                indexPaths.append(IndexPath(row: index, section: 0))
+                
+            }
+            
+            tableView.reloadRows(at: indexPaths, with: .automatic)
+            
+        }else {
+            
+            CatergoryStore.shared.addCatergory(catergory: catergoryDetailVC.catergory)
+            let indexPath = IndexPath(row: 0, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            
+        }
+        
+    }
 }

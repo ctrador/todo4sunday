@@ -54,12 +54,6 @@ UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        catergorySelection = row
-    }
     func addGestureRecognizer() {
         gestureRecognizer = UITapGestureRecognizer(target: self, action:
             #selector(viewImage))
@@ -86,8 +80,6 @@ UIViewController {
            
             toDoCompleteLabel.text = "You need to Complete this To Do"
         
-      //  toDoCompleteLabel.text = "completed to\(toDoCompleteSwitch.isOn)"
-        
         }
     }
     
@@ -100,7 +92,6 @@ UIViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         toDo.title = toDoTitleField.text!

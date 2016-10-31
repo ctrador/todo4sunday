@@ -10,7 +10,6 @@ import UIKit
 
 class ToDo: NSObject, NSCoding {
     
-   // var category = ""
     var title = ""
     var text = ""
     var date = Date()

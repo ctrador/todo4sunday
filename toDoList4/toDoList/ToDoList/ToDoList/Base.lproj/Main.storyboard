@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--To Do Catergory Table View Controller-->
         <scene sceneID="0Cc-QX-brc">
             <objects>
                 <tableViewController id="phs-Xu-XKX" customClass="ToDoCatergoryTableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCatergoryCell" id="xVq-SJ-TYK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCatergoryCell" id="xVq-SJ-TYK" customClass="CatergoryTableViewCell" customModule="ToDoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xVq-SJ-TYK" id="r9v-Vg-ZTt">
                                     <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwM-pb-TzI">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GwM-pb-TzI" firstAttribute="trailing" secondItem="r9v-Vg-ZTt" secondAttribute="trailingMargin" id="0qH-K1-oW7"/>
+                                        <constraint firstItem="GwM-pb-TzI" firstAttribute="leading" secondItem="r9v-Vg-ZTt" secondAttribute="leadingMargin" id="2p2-MP-5in"/>
+                                        <constraint firstItem="GwM-pb-TzI" firstAttribute="top" secondItem="r9v-Vg-ZTt" secondAttribute="topMargin" id="mz3-rz-eR6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="toDoCatergoryLabel" destination="GwM-pb-TzI" id="SNH-TD-9c6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,11 +46,60 @@
                             <outlet property="delegate" destination="phs-Xu-XKX" id="ylE-ya-G6G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="60X-Lv-D0i"/>
+                    <navigationItem key="navigationItem" id="60X-Lv-D0i">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UUW-AB-hB0">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Add New Category"/>
+                            <connections>
+                                <segue destination="22A-vB-Vqf" kind="show" identifier="AddCatergorySegue" id="yYv-9M-5yB"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pH0-tk-cc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479" y="97"/>
+            <point key="canvasLocation" x="-479.19999999999999" y="96.7016491754123"/>
+        </scene>
+        <!--To Do Catergory Detail View Controller-->
+        <scene sceneID="UdU-Sj-07Z">
+            <objects>
+                <viewController id="22A-vB-Vqf" customClass="ToDoCatergoryDetailViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ISH-5j-0B9"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjy-cu-oNl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7eg-Og-kut">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Category Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fK-Zd-xJu">
+                                <frame key="frameInset" minX="21" minY="72" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl0-ve-4FQ">
+                                <frame key="frameInset" minX="256" minY="110" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="WN9-eO-aQo" kind="unwind" unwindAction="saveCatergoryDetail:" id="gHd-WP-Mbq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="toDoNewCatergoryTextField" destination="7fK-Zd-xJu" id="0n4-uO-Yvu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lp9-vg-BMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WN9-eO-aQo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p0L-6N-76G">
@@ -66,10 +130,10 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="262"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nda-Y2-MGd" id="JLi-eK-Sym">
-                                    <frame key="frameInset" width="375" height="261"/>
+                                    <frame key="frameInset" width="375" height="261.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-cA-gGf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-cA-gGf">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="hwL-zM-54a"/>
                                             </constraints>
@@ -77,7 +141,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Std-r5-FSV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Std-r5-FSV">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="xsR-7X-ay9"/>
                                             </constraints>
@@ -85,7 +149,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-V7-ROb">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-V7-ROb">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="359" id="Zkb-1R-gQn"/>
                                                 <constraint firstAttribute="height" constant="21" id="lcU-41-JgT"/>
@@ -112,7 +176,7 @@
                                                 <segue destination="l9f-0C-Ili" kind="show" identifier="AddToDoSegue" id="F4w-ER-LLg"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-NI-ZTM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-NI-ZTM">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
