@@ -21,12 +21,12 @@ class Catergory: NSObject, NSCoding {
     
     init(catergory: String) {
         self.catergory = catergory
-           }
+    }
     
     required init? (coder aDecoder: NSCoder) {
         self.catergory = aDecoder.decodeObject(forKey: catergoryKey) as! String
-      }
+    }
     func encode(with aCoder: NSCoder) {
         aCoder.encode(catergory, forKey: catergoryKey)
-        }
+    }
 }

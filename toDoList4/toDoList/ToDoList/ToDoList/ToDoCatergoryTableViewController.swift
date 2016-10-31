@@ -15,8 +15,8 @@ class ToDoCatergoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toDoCatergoryNames = ["Home", "Work", "Other"]
-        toDoCatergoryIdentities = ["home", "work", "other"]
+        toDoCatergoryNames = ["Home", "Work"]
+        toDoCatergoryIdentities = ["home", "work"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -65,15 +65,15 @@ class ToDoCatergoryTableViewController: UITableViewController {
      */
     
     
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     
     
     
@@ -92,10 +92,10 @@ class ToDoCatergoryTableViewController: UITableViewController {
     
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditCatergorySegue"{
             let catergoryDetailVC = segue.destination as! ToDoCatergoryDetailViewController
             let catergorytableCell = sender as! CatergoryTableViewCell
@@ -103,13 +103,13 @@ class ToDoCatergoryTableViewController: UITableViewController {
             
             
             
+            
+            
+            
+        }
         
         
-        
-     }
-    
-    
-}
+    }
     
     
     // mark: unwind Segue

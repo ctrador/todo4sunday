@@ -30,7 +30,7 @@ class ToDoStore {
             
             toDos.append(ToDo(title: "To Do 3", text: "This is a to do detail or is it", dueDate: "12/31/20016 12:59", completed: "You Need To Complete this To Do"))
             
-         
+            
             save()
         }
         

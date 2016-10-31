@@ -9,7 +9,7 @@
 import UIKit
 
 class ToDoCatergoryDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var toDoNewCatergoryTextField: UITextField!
     
     var catergory = Catergory()
@@ -18,11 +18,11 @@ class ToDoCatergoryDetailViewController: UIViewController {
         super.viewDidLoad()
         
         toDoNewCatergoryTextField.text = catergory.catergory
-       }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-       
+        
     }
     
     
@@ -31,10 +31,10 @@ class ToDoCatergoryDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         catergory.catergory = toDoNewCatergoryTextField.text!
-            }
+    }
     
     // MARK: IBActions
     
-        }
+}
 
 

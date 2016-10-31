@@ -63,9 +63,9 @@ class CatergoryStore {
     
     // **sort by catergory
     func sort() {
-    catergorys.sort { (catergory1, catergory2) -> Bool in
-    return catergory1.catergory.compare(catergory2.catergory) == .orderedDescending
-    
+        catergorys.sort { (catergory1, catergory2) -> Bool in
+            return catergory1.catergory.compare(catergory2.catergory) == .orderedDescending
+            
         }
     }
     // Mark - Private Functions

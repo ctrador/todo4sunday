@@ -24,7 +24,7 @@ UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var toDoCompleteSwitch: UISwitch!
-   
+    
     @IBOutlet weak var toDoCompleteLabel: UILabel!
     
     
@@ -74,12 +74,12 @@ UIViewController {
     func toDoCompleteStatus()  {
         
         if toDoCompleteSwitch.isOn {
-           
+            
             toDoCompleteLabel.text = "This To Do is Complete"
         }else {
-           
+            
             toDoCompleteLabel.text = "You need to Complete this To Do"
-        
+            
         }
     }
     
@@ -104,7 +104,7 @@ UIViewController {
     }
     
     // MARK: IBActions
-  
+    
     @IBAction func toDoCompleteSwitchMoved(_ sender: AnyObject) {
         
         toDoCompleteStatus()
