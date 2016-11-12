@@ -27,7 +27,7 @@ class CatergoryStore {
             catergorys = []
             catergorys.append(Catergory(catergory: "Home"))
             catergorys.append(Catergory(catergory: "Work"))
-            catergorys.append(Catergory(catergory: "Other"))
+        
             
             save()
         }
